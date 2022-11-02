@@ -23,12 +23,16 @@ function createSnowFlake() {
 
 // 마지막 페이지에서 눈이 뒷 페이지로 이동하기
 
+if ()
+
+
 function detectBottom() {
     var scrollTop = $(window).scrollTop();
     var innerHeight = $(window).innerHeight();
     var scrollHeight = $('body').prop('scrollHeight');
     if (scrollTop + innerHeight >= scrollHeight) {
-        return true;
+//        return true;
+    console.log ('바닥에 도착')
     } else {
         return false;
     }
