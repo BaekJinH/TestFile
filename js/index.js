@@ -23,7 +23,13 @@ function createSnowFlake() {
 
 // 마지막 페이지에서 눈이 뒷 페이지로 이동하기
 
-if ()
+let underFloor = document.querySelector('.s9');
+let snow = document.querySelectorAll('.fa-snowflake');
+
+
+if (underFloor >= detectBottom) {
+    snow.style.display = 'none';
+}
 
 
 function detectBottom() {
