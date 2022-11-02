@@ -1,7 +1,7 @@
 :root {
-    color : #666;
+    --bGcolor : #666;
 }
 
 #test {
-    background : var (--color)
+    background : var (--bGcolor)
 }
