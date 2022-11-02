@@ -1,9 +1,11 @@
 :root {
     --bGcolor : #666;
     --fontColor : #777;
+    --baseFont : 15px;
 }
 
 #test {
     background : var (--bGcolor) ; 
     color : var (--fontColor) ;
+    font-size : var (--baseFont)
 }
