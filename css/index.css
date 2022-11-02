@@ -1,7 +1,9 @@
 :root {
     --bGcolor : #666;
+    --fontColor : #777;
 }
 
 #test {
-    background : var (--bGcolor)
+    background : var (--bGcolor) ; 
+    color : var (--fontColor) ;
 }
