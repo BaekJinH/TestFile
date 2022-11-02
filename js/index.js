@@ -30,6 +30,9 @@ let snow = document.querySelectorAll('.fa-snowflake');
 if (underFloor >= detectBottom) {
     snow.style.display = 'none';
 }
+else {
+    snow.style.display = 'block'
+}
 
 
 function detectBottom() {
