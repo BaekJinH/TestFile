@@ -24,22 +24,27 @@ function createSnowFlake() {
 // 현 페이지는 실험 Branch 페이지임
 
 
-// 마지막 페이지에서 눈이 잠시 사라지도록 만들기
 
-let underFloor = document.querySelector('.s9');
-let snow = document.querySelectorAll('.fa-snowflake');
-
-
-if (underFloor >= detectBottom) {
-    snow.style.display = 'none';
-}
-else {
-    snow.style.display = 'block'
-}
+// <<<<<<< HEAD
+// // 마지막 페이지에서 눈이 잠시 사라지도록 만들기
 
 
-// 제이쿼리 자바스크립트로 변경
+// let underFloor = document.querySelector('.s9');
+// let snow = document.querySelectorAll('.fa-snowflake');
 
+
+// if (underFloor >= detectBottom) {
+//     snow.style.display = 'none';
+// }
+// else {
+//     snow.style.display = 'block'
+// }
+
+
+// // 제이쿼리 자바스크립트로 변경
+
+// =======
+// >>>>>>> 68d0a3d (.)
 function detectBottom() {
     var scrollTop = document.window.scrollTop();
     var innerHeight = document.window.innerHeight();
