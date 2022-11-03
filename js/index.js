@@ -41,9 +41,9 @@ else {
 // 제이쿼리 자바스크립트로 변경
 
 function detectBottom() {
-    var scrollTop = window.scrollTop();
+    var scrollTop = document.window.scrollTop();
     // var scrollTop = $(window).scrollTop();
-    var innerHeight = window.innerHeight();
+    var innerHeight = document.window.innerHeight();
     // var innerHeight = $(window).innerHeight();
     var scrollHeight = document.getElementsByTagName('body').prop('scrollHeight')
     // var scrollHeight = $('body').prop('scrollHeight');
