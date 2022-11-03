@@ -42,14 +42,11 @@ else {
 
 function detectBottom() {
     var scrollTop = document.window.scrollTop();
-    // var scrollTop = $(window).scrollTop();
     var innerHeight = document.window.innerHeight();
-    // var innerHeight = $(window).innerHeight();
-    var scrollHeight = document.getElementsByTagName('body').prop('scrollHeight')
-    // var scrollHeight = $('body').prop('scrollHeight');
+    var scrollHeight = document.getElementsByTagName('body').val('scrollHeight')
     if (scrollTop + innerHeight >= scrollHeight) {
-//        return true;
-    console.log ('바닥에 도착')
+       console.log ('바닥에 도착')
+       return true;
     } else {
         return false;
     }
