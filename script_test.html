@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+            height:8000px;
+        }
+        button {
+            top:0;
+            position:fixed;
+            background-color: cyan;
+        }
+        main {
+            height: 4000px;
+            background-color:#eee;
+        }
+
+        footer{
+            background-color: #252525;
+            height:4000px !important;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                // 함수가 작동하지 않는 건 아님
+                console.log(1)
+
+                var scroll = $(this).scrollTop();
+                console.log (scroll)
+                
+                if (scroll > $('footer').offset().top) {
+                    $('button').css({ display: 'none' })
+                }
+                else {
+                    $('button').css({display:'block'})
+                }
+            })
+        });
+
+
+        $(function(){
+            var offset = $('header').offset();
+            $('button').click(function(){
+                var index = $('button').index(this);
+                if(index == 0) {
+                    $('html , body').animate({scrollTop : offset.top}, 400)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <header></header>
+    <button style="width:75px; height:75px; border-radius:50%">test btn</button>
+    <main>
+        
+    </main>
+    <footer style="height:4000px"></footer>
+</body>
+</html>

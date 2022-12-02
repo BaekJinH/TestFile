@@ -1,0 +1,1250 @@
+:root {
+  --fontColor: #666;
+}
+
+.family {
+  @import url("http://fontsunquote Droid + Sans");
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.globalWrap {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: -160px;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: all 0.5s;
+}
+.globalWrap .globalNav {
+  width: 160px;
+  height: 100vh;
+  box-shadow: 0px 0px 10px;
+  top: 0;
+  background-color: white;
+}
+.globalWrap .globalNav h2 {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  border-bottom: 1px solid #Eee;
+}
+.globalWrap .globalNav a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  background-image: url(../img/logo.png);
+  background-size: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.globalWrap .globalNav .subNav {
+  width: 100%;
+  height: auto;
+}
+.globalWrap .globalNav .subNav div {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #Eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+.globalWrap .globalNav .subNav .subOn {
+  background-color: purple;
+  color: orange;
+}
+.globalWrap .globalOpen {
+  margin-top: 150px;
+  width: 70px;
+  height: 70px;
+  background-image: url(../img/lnb_icon_open.png);
+  cursor: pointer;
+  transition: all 0.52s;
+}
+
+.fs-small {
+  font-size: 12px;
+}
+.fs-medium {
+  font-size: 14px;
+}
+.fs-large {
+  font-size: 16px;
+}
+
+.toggleOpen {
+  left: 0;
+}
+
+#headerGroup {
+  width: 100%;
+  height: 250px;
+}
+#headerGroup #navGroup {
+  width: 100%;
+  height: 52px;
+}
+#headerGroup #navGroup .navList {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#headerGroup #navGroup .navList li {
+  float: left;
+  margin-right: 20px;
+  color: black;
+  font-size: 10px;
+  font-weight: bold;
+}
+#headerGroup #navGroup .navList li li:before {
+  content: "";
+}
+#headerGroup #header {
+  width: 100%;
+  height: 193px;
+}
+#headerGroup #header .innerHead {
+  width: 1130px;
+  height: 55%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+}
+#headerGroup #header .innerHead .inputLogo {
+  width: 180px;
+  height: 35px;
+  margin-bottom: 10px;
+  background-image: url(../img/inputLogo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#headerGroup #header .innerHead form {
+  position: relative;
+}
+#headerGroup #header .innerHead form input {
+  width: 540px;
+  height: 50px;
+  color: #666;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 30px;
+  content: "\f002";
+}
+#headerGroup #header .innerHead form i {
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+#headerGroup #header .bottomHead {
+  width: 1130px;
+  height: 47%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+}
+#headerGroup #header .bottomHead .headCategory {
+  width: 180px;
+  height: 50%;
+  background-color: black;
+  color: White;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#headerGroup #header .bottomHead .headEvent {
+  width: 910px;
+  height: 50%;
+  margin-left: 35px;
+  display: flex;
+}
+#headerGroup #header .bottomHead .headEvent > div {
+  width: 20%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+#headerGroup #header .bottomHead .headEvent > div .leftImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+#headerGroup #header .bottomHead .headEvent > div .rightText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  font-size: 11px;
+}
+#headerGroup #header .bottomHead .headEvent > div .weightOn {
+  font-weight: bold;
+}
+#headerGroup #header .bottomHead .headEvent > div:nth-of-type(1) .leftImg {
+  background-image: url(//s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0720/b63Ht.png);
+}
+#headerGroup #header .bottomHead .headEvent > div:nth-of-type(2) .leftImg {
+  background-image: url(//s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0720/TFPuy.png);
+}
+#headerGroup #header .bottomHead .headEvent > div:nth-of-type(3) .leftImg {
+  background-image: url(//s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0711/6BEbd.png);
+}
+#headerGroup #header .bottomHead .headEvent > div:nth-of-type(4) .leftImg {
+  background-image: url(//s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0707/j80K0.png);
+}
+#headerGroup #header .bottomHead .headEvent > div:nth-of-type(5) .leftImg {
+  background-image: url(//s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0608/KhUNz.png);
+}
+#headerGroup #header .bottomHead .headEvent .controlBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#headerGroup #header .bottomHead .headEvent .controlBtn div {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee;
+}
+
+#container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+#container #contents {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#container #contents #slideBanner {
+  width: 100%;
+  height: 400px;
+  background: #ED4901;
+  overflow: hidden;
+}
+#container #contents #slideBanner .slideWrap {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+}
+#container #contents #slideBanner .containerSlide {
+  width: 480px;
+  height: 304px;
+  background-color: white;
+  margin-right: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container #contents #slideBanner .containerSlide .warping {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+#container #contents #slideBanner .containerSlide .warping .textWrap {
+  width: 50%;
+}
+#container #contents #slideBanner .containerSlide .warping .textWrap span {
+  display: block;
+  padding-bottom: 20px;
+  font-size: 13px;
+}
+#container #contents #slideBanner .containerSlide .warping .imgWrap {
+  width: 40%;
+  height: 100%;
+}
+#container #contents #slideBanner .containerSlide .warping .imgWrap img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 8px 8px 8px #eee;
+}
+#container #contents #slideBanner .subCategoryWrap {
+  width: 1130px;
+  heighT: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+#container #contents #slideBanner .subCategoryWrap .upSideCategory {
+  width: 780px;
+  height: 400px;
+  left: 180px;
+  position: absolute;
+}
+#container #contents #slideBanner .subCategoryWrap .upSideCategory1 {
+  width: 780px;
+  height: 400px;
+  left: 180px;
+  position: absolute;
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0720/vUtz6.png);
+}
+#container #contents #slideBanner .subCategoryWrap .upSideCategory2 {
+  width: 780px;
+  height: 400px;
+  left: 180px;
+  position: absolute;
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0720/Vy9Xy.png);
+  display: none;
+}
+#container #contents #slideBanner .subCategoryWrap .upSideCategory3 {
+  width: 780px;
+  height: 400px;
+  left: 180px;
+  position: absolute;
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0711/Cj11p.png);
+  display: none;
+}
+#container #contents #slideBanner .subCategoryWrap .upSideCategory4 {
+  width: 780px;
+  height: 400px;
+  left: 180px;
+  position: absolute;
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0711/sJz17.png);
+  display: none;
+}
+#container #contents #slideBanner .subCategoryWrap .upSideCategory5 {
+  width: 780px;
+  height: 400px;
+  left: 180px;
+  position: absolute;
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0608/XmcoV.png);
+  display: none;
+}
+#container #contents #slideBanner .subCategoryWrap .subCategory {
+  width: 180px;
+  height: 100%;
+}
+#container #contents #slideBanner .subCategoryWrap .subCategory ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+#container #contents #slideBanner .subCategoryWrap .subCategory ul li {
+  width: 100%;
+  height: 57px;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  font-weight: bold;
+}
+#container #contents #slideBanner .subCategoryWrap .subCategory ul li:hover {
+  background-color: black;
+}
+#container #contents #main {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+#container #contents #main > div {
+  margin-top: 80px;
+}
+#container #contents #main > div .head h2 {
+  color: black;
+}
+#container #contents #main .mainWrap1 {
+  margin: 50px auto;
+  width: 1130px;
+  height: 470px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#container #contents #main .mainWrap1 .head {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+#container #contents #main .mainWrap1 .head h2 {
+  margin-right: 20px;
+}
+#container #contents #main .mainWrap1 .info {
+  width: 100%;
+  height: 403px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#container #contents #main .mainWrap1 .info .book {
+  width: 23%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+#container #contents #main .mainWrap1 .info .book img {
+  margin-bottom: 50px;
+  width: 160px;
+  height: 225px;
+}
+#container #contents #main .mainWrap1 .info .book p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#container #contents #main .mainWrap1 .info .book h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: black;
+}
+#container #contents #main .mainWrap1 .info .book span {
+  font-size: 12px;
+}
+#container #contents #main .mainWrap2 {
+  margin: 50px auto;
+  width: 1130px;
+  height: 848px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+#container #contents #main .mainWrap2 .head {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #eee;
+  border: none;
+}
+#container #contents #main .mainWrap2 .main2BestSeller {
+  width: 100%;
+  height: 768px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2Category {
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2Category div {
+  width: 156px;
+  height: 35px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  color: #333;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2Category .on {
+  background-color: darkblue;
+  color: White;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo {
+  width: 100%;
+  height: 714px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  flex-flow: row wrap !important;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .leftMenu {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 40px;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .leftMenu div {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .leftMenu .onBorder {
+  border-bottom: 3px solid black;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .rightImg {
+  width: 71%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .rightImg > div {
+  width: 140px;
+  height: 307px;
+  position: relative;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .rightImg > div > div:not(.imgInfo) {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: -5%;
+  background-color: darkblue;
+  color: white;
+  displaY: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .rightImg > div .imgInfo .upImg {
+  width: 100%;
+  height: 65%;
+  border: 1px solid #eee;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .rightImg > div .imgInfo .upImg img {
+  width: 100%;
+  height: 100%;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .rightImg > div .imgInfo .downText {
+  height: 70%;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .rightImg > div .imgInfo .downText h3 {
+  font-size: 16px;
+}
+#container #contents #main .mainWrap2 .main2BestSeller .main2BestInfo .rightImg > div .imgInfo .downText span {
+  font-size: 10px;
+}
+#container #contents #main .mainWrap3 {
+  margin: 50px auto;
+  width: 1130px;
+  height: 556px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#container #contents #main .mainWrap3 > .head {
+  border-bottom: 1px solid #eee;
+}
+#container #contents #main .mainWrap3 > .head p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#container #contents #main .mainWrap3 .main3Book {
+  width: 100%;
+  height: 307px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+#container #contents #main .mainWrap3 .main3Book > div {
+  width: 140px;
+  heighT: 100%;
+}
+#container #contents #main .mainWrap3 .main3Book > div .main3Img {
+  width: 100%;
+  height: 65%;
+  border: 1px solid #eee;
+}
+#container #contents #main .mainWrap3 .main3Book > div .main3Img img {
+  width: 100%;
+  height: 100%;
+}
+#container #contents #main .mainWrap3 .main3Book > div .main3Text {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: flex-end;
+}
+#container #contents #main .mainWrap3 .main3Book > div .main3Text .txtWrap {
+  height: 70%;
+}
+#container #contents #main .mainWrap3 .main3Book > div .main3Text .txtWrap h3 {
+  font-size: 16px;
+}
+#container #contents #main .mainWrap3 .main3Book > div .main3Text .txtWrap span {
+  font-size: 10px;
+}
+#container #contents #main .mainWrap3 .bookApply {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  background-image: url(../img/applyImg.png);
+}
+#container #contents #main .mainWrap3 .bookApply .wantU {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container #contents #main .mainWrap3 .bookApply .plz {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#container #contents #main .mainWrap4 {
+  margin: 50px auto;
+  width: 1130px;
+  height: 506px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#container #contents #main .mainWrap4 > .head {
+  border-bottom: 1px solid #eee;
+}
+#container #contents #main .mainWrap4 > .head p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#container #contents #main .mainWrap4 .main3Book {
+  width: 100%;
+  height: 307px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+#container #contents #main .mainWrap4 .main3Book > div {
+  width: 140px;
+  heighT: 100%;
+}
+#container #contents #main .mainWrap4 .main3Book > div .main3Img {
+  width: 100%;
+  height: 65%;
+  border: 1px solid #eee;
+}
+#container #contents #main .mainWrap4 .main3Book > div .main3Img img {
+  width: 100%;
+  height: 100%;
+}
+#container #contents #main .mainWrap4 .main3Book > div .main3Text {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: flex-end;
+}
+#container #contents #main .mainWrap4 .main3Book > div .main3Text .txtWrap {
+  height: 70%;
+}
+#container #contents #main .mainWrap4 .main3Book > div .main3Text .txtWrap h3 {
+  font-size: 16px;
+}
+#container #contents #main .mainWrap4 .main3Book > div .main3Text .txtWrap span {
+  font-size: 10px;
+}
+#container #contents #main .mainWrap4 .bookApply {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  background-image: url(../img/applyImg2.png);
+}
+#container #contents #main .mainWrap6 {
+  margin: 50px auto;
+  width: 1130px;
+  height: 367px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#container #contents #main .mainWrap6 .main6Item {
+  width: 100%;
+  height: 307px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+#container #contents #main .mainWrap6 .main6Item > div {
+  width: 140px;
+  heighT: 100%;
+}
+#container #contents #main .mainWrap6 .main6Item > div .main6Img {
+  width: 100%;
+  height: 65%;
+  border: 1px solid #eee;
+}
+#container #contents #main .mainWrap6 .main6Item > div .main6Img img {
+  width: 100%;
+  height: 100%;
+}
+#container #contents #main .mainWrap6 .main6Item > div .main6Text {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: flex-end;
+}
+#container #contents #main .mainWrap6 .main6Item > div .main6Text .txtWrap {
+  height: 70%;
+}
+#container #contents #main .mainWrap6 .main6Item > div .main6Text .txtWrap h3 {
+  font-size: 16px;
+}
+#container #contents #main .mainWrap6 .main6Item > div .main6Text .txtWrap span {
+  font-size: 10px;
+}
+#container #contents #main .mainWrap7 {
+  margin: 50px auto;
+  width: 100%;
+  height: 63px;
+  background-color: rgb(185, 39, 230);
+}
+#container #contents #main .mainWrap7 .main7Inner {
+  width: 1130px;
+  height: 100%;
+  background-color: purple;
+  color: White;
+  margin: 0 auto;
+}
+#container #contents #main .mainWrap8 {
+  width: 100%;
+  height: 572px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#container #contents #main .mainWrap8 .head {
+  margin: 0 auto;
+  width: 1130px;
+  display: flex;
+  align-items: center;
+}
+#container #contents #main .mainWrap8 .head h2 {
+  margin-right: 20px;
+}
+#container #contents #main .mainWrap8 .main8Slide {
+  width: 100%;
+  height: 512px;
+  position: relative;
+}
+#container #contents #main .mainWrap8 .main8Slide .btnControlWrap {
+  position: absolute;
+  width: 1300px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#container #contents #main .mainWrap8 .main8Slide .btnControlWrap i {
+  display: none;
+}
+#container #contents #main .mainWrap8 .main8Slide .btnControlWrap .prev {
+  font-size: 70px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#container #contents #main .mainWrap8 .main8Slide .btnControlWrap .next {
+  font-size: 70px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#container #contents #main .mainWrap8 .main8Slide .coverWrap {
+  width: 100%;
+  height: 464px;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen {
+  width: 1130px;
+  height: 464px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul {
+  width: 3390px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li {
+  border: 1px solid #eee;
+  width: 555px;
+  height: 460px;
+  float: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li .upBg {
+  width: 525px;
+  height: 310px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #222;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li .upBg .upBgLeft {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li .upBg .upBgLeft h3 {
+  color: White;
+  margin-top: 50px;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li .upBg .upBgRight {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li .upBg .upBgRight img {
+  width: 140px;
+  height: 220px;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li .downTxt {
+  width: 525px;
+  height: 86px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li .downTxt h3 {
+  font-size: 24px;
+  width: 50%;
+}
+#container #contents #main .mainWrap8 .main8Slide .slideScreen ul li .downTxt span {
+  font-size: 12px;
+  color: #777;
+}
+#container #contents #main .mainWrap8 .main8Slide .arrayBtn {
+  width: 1130px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container #contents #main .mainWrap8 .main8Slide .arrayBtn div {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+#container #contents #main .mainWrap8 .main8Slide .arrayBtn .btnOn {
+  background-color: black;
+}
+#container #contents #main .mainWrap9 {
+  width: 1130px;
+  height: 356px;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#container #contents #main .mainWrap9 .head {
+  margin: 0 auto;
+  width: 1130px;
+}
+#container #contents #main .mainWrap9 .main9Event {
+  width: 100%;
+  height: 296px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+}
+#container #contents #main .mainWrap9 .main9Event div {
+  width: 275px;
+  height: 143px;
+  background-size: cove;
+  background-position: center;
+}
+#container #contents #main .mainWrap9 .main9Event div .innerWrap {
+  width: 90%;
+  height: 80%;
+  margin: 20px auto;
+  font-weight: bold;
+  font-size: 13px;
+}
+#container #contents #main .mainWrap9 .main9Event > div:nth-of-type(1) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2021/0701/3Pd06.png);
+}
+#container #contents #main .mainWrap9 .main9Event > div:nth-of-type(2) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0208/swHVk.png);
+}
+#container #contents #main .mainWrap9 .main9Event > div:nth-of-type(3) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0623/sI9UK.png);
+}
+#container #contents #main .mainWrap9 .main9Event > div:nth-of-type(4) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2020/0804/g2zKf.png);
+}
+#container #contents #main .mainWrap9 .main9Event > div:nth-of-type(5) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2021/0803/LhIXq.png);
+}
+#container #contents #main .mainWrap9 .main9Event > div:nth-of-type(6) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2020/0224/Q4QTg.png);
+}
+#container #contents #main .mainWrap9 .main9Event > div:nth-of-type(7) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2021/1022/GDTSs.png);
+}
+#container #contents #main .mainWrap9 .main9Event > div:nth-of-type(8) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2020/0804/8CZjl.png);
+}
+#container #contents #main .mainWrap10 {
+  width: 100%;
+  height: 776px;
+  position: relative;
+}
+#container #contents #main .mainWrap10 .main10BgColor {
+  width: 100%;
+  height: 400px;
+  background-color: lightpink;
+  position: absolute;
+  top: 0;
+}
+#container #contents #main .mainWrap10 .main10Inner {
+  width: 842px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(1) {
+  width: 100%;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(1) h2 {
+  font-weight: normal;
+  color: white;
+  font-size: 38px;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(1) .price {
+  right: 0;
+  position: absolute;
+  width: 160px;
+  height: 56px;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(1) .price h3 {
+  font-size: 38px;
+  color: white;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(1) .price span {
+  color: white;
+  float: right;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(2) {
+  width: 100%;
+  height: 96px;
+  z-index: 9;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(2) p {
+  z-index: 9;
+  width: 79%;
+  color: white;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(2) p strong {
+  color: white;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(2) .link {
+  display: block;
+  color: white;
+  z-index: 9;
+  margin-top: 20px;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(3) {
+  width: 100%;
+  height: 271px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(3) div {
+  z-index: 9;
+  width: 266px;
+  height: 266px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px #eee;
+  background-color: white;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(3) div:nth-of-type(1) {
+  background-image: url(//s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/2021/main/bunchul_01.png);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(3) div:nth-of-type(2) {
+  background-image: url(//s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/2021/main/bunchul_02.png);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(3) div:nth-of-type(3) {
+  background-image: url(//s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/2021/main/bunchul_03.png);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap10 .main10Inner > div:nth-of-type(4) {
+  width: 100%;
+  height: 112px;
+  margin: 0 auto;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+#container #contents #main .mainWrap11 {
+  margin: 50px auto;
+  width: 1130px;
+  height: 489px;
+}
+#container #contents #main .mainWrap11 img {
+  background-image: url(../img/main11_Img.gif);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap12 {
+  width: 1130px;
+  height: 744px;
+  margin: 50px auto;
+}
+#container #contents #main .mainWrap12 .main12Head {
+  margin-bottom: 30px;
+}
+#container #contents #main .mainWrap12 .main12Promotion {
+  width: 100%;
+  height: 569px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .firstWrap {
+  width: 65%;
+  height: 100%;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .firstWrap img {
+  width: 100%;
+  height: 100%;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .lastWrap {
+  width: 35%;
+  height: 100%;
+  displaY: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .lastWrap div {
+  width: 49%;
+  height: 33%;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .lastWrap div:nth-of-type(1) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0328/2741/2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .lastWrap div:nth-of-type(2) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0328/2741/3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .lastWrap div:nth-of-type(3) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0328/2741/4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .lastWrap div:nth-of-type(4) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0328/2741/5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .lastWrap div:nth-of-type(5) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0328/2741/6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap12 .main12Promotion .promotionWrap .lastWrap div:nth-of-type(6) {
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/libro.image/Libro_V6/upload/2022/0328/2741/7.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#container #contents #main .mainWrap12 .bottomImage {
+  float: right;
+  width: 10%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#container #contents #main .mainWrap12 .bottomImage div {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #777;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 23px;
+  cursor: pointer;
+}
+#container #contents #main .mainWrap12 .bottomImage div i {
+  color: #777;
+}
+
+.footOnBox {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.footOnBox .onBoxInner {
+  width: 1130px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footOnBox .onBoxInner div {
+  height: 18px;
+  display: flex;
+  align-items: center;
+}
+.footOnBox .onBoxInner div i {
+  margin-right: 10px;
+}
+.footOnBox .onBoxInner div span {
+  display: block;
+}
+.footOnBox .onBoxInner .onBoxOne {
+  width: 180px;
+  margin-right: 40px;
+}
+.footOnBox .onBoxInner .onBoxOne span {
+  font-weight: bold;
+}
+.footOnBox .onBoxInner .onBoxTwo {
+  width: 850px;
+  font-size: 14px;
+}
+.footOnBox .onBoxInner .onBoxThree {
+  width: 60px;
+}
+.footOnBox .onBoxInner .onBoxThree span {
+  displaY: block;
+  width: 100%;
+  font-size: 14px;
+}
+
+#footer {
+  width: 100%;
+  height: 150px;
+  displaY: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .innerFoot {
+  margin: 0 auto;
+  width: 1130px;
+  height: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .innerFoot .footLogo {
+  width: 130px;
+  height: 26px;
+  background-image: url(../img/inputLogo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#footer .innerFoot .footTxt {
+  width: 930px;
+  height: 100%;
+}
+#footer .innerFoot .footTxt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+#footer .innerFoot .footTxt ul li {
+  width: 100%;
+  height: 17px;
+}
