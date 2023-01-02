@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            background : black;
-        }
-    </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <p>
-        Test Text
-    </p>
-    <!-- <script src="js/test.js"></script>
-    <script src="js/index.js"></script> -->
+    <canvas style="border:1px solid black"id="canva"></canvas>
+    <script>
+        // 1. canvas 엘리먼트 취득
+        const canvas = document.getElementById("canva");
+        canvas.width = 100 + "px"
+        canvas.height = 500 + "px"
+
+        // 2. 그리기객체 취득
+        const ctx = canvas.getContext("2d");
+
+        // 3. 애니메이션 시작점 좌표 설정
+        let x = 0;
+
+        // 4. 애니메이션 함수 선언
+        function animate(){
+            // 1) 함수가 실행될 때마다 화면 초기화(canvas의 너비와 높이 만큼 지움)
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 2) 사각형 그리기
+            ctx.fillStyle = "black";
+            ctx.fillRect(x, 130, 100, 100);
+
+            // 3) 사각형이 그려질 x좌표 증가
+            //   => 함수가 실행될때마다 x좌표가 1씩 증가한 상태로 사각형이 그려진다.
+            x++;
+        }
+
+        // 5. 애니메이션 함수를 50ms 간격으로 반복 호출
+        setInterval(animate, 50);
+    </script>
     <script>
         // 즉시실행 함수
         (function(){
