@@ -11,12 +11,25 @@
         }
     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 <body>
     <p>
         Test Text
     </p>
-    <script src="js/test.js"></script>
-    <script src="js/index.js"></script>
+    <!-- <script src="js/test.js"></script>
+    <script src="js/index.js"></script> -->
+    <script>
+        // 즉시실행 함수
+        (function(){
+            console.log(1)
+        }())
+
+        // arrow function
+        let sum = () => {
+            console.log(2)
+        }
+        sum()
+    </script>
 </body>
 </html>
