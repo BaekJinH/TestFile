@@ -21,52 +21,51 @@
         <canvas class="canvas"></canvas>
 
         <script>
-        const canvas = document.querySelector(".canvas");
-        
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const ctx = canvas.getContext("2d");
-
-        let x = 0;
-        let y = -100 + "%"
-
-        function keyDown(){
-            let keyCode = event.keyCode;
-            if( keyCode == 8 || keycode == 116) event.returnValue = false;
-        }
-
-        function animate() {
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+            const canvas = document.querySelector(".canvas");
             
-            ctx.beginPath()
-            ctx.fillStyle = "white";
-            ctx.fillRect(x, 130, 100, 100);
-            ctx.closePath()
-            
-            ctx.beginPath()
-            ctx.fillStyle = "black";
-            ctx.fillRect(x, 330, 100, 100);
-            ctx.closePath()
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
 
-            ctx.beginPath()
-            ctx.fillStyle = "pink"
-            ctx.fillRect(x, 530, 100, 100);
-            ctx.fill()
-            ctx.closePath()
+            const ctx = canvas.getContext("2d");
 
-            ctx.beginPath()
-            ctx.fillStyle = "yellow"
-            ctx.arc(x, 730,50,100,0, Math.PI * 2)
-            ctx.fill()
-            ctx.closePath()
-            
-            x++
-        }
-        setInterval(animate,50)
+            let x = 0;
+            let y = -100 + "%"
 
+            function keyDown(){
+                let keyCode = event.keyCode;
+                if( keyCode == 8 || keycode == 116) event.returnValue = false;
+            }
+
+            function animate() {
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                
+                ctx.beginPath()
+                ctx.fillStyle = "white";
+                ctx.fillRect(x, 130, 100, 100);
+                ctx.closePath()
+                
+                ctx.beginPath()
+                ctx.fillStyle = "black";
+                ctx.fillRect(x, 330, 100, 100);
+                ctx.closePath()
+
+                ctx.beginPath()
+                ctx.fillStyle = "pink"
+                ctx.fillRect(x, 530, 100, 100);
+                ctx.fill()
+                ctx.closePath()
+
+                ctx.beginPath()
+                ctx.fillStyle = "yellow"
+                ctx.arc(x, 730,50,100,0, Math.PI * 2)
+                ctx.fill()
+                ctx.closePath()
+                
+                x += 1
+            }
+            setInterval(animate,1)
         // Canvas에 무언가를 그릴 때에는 beginPath() / closePath() 를 써주는 것이 좋다
         // 여러가지를 그릴 때 위에서 선언한 색과 겹쳐 마지막 요소 뒤 테두리 부분에 지저분하게 나옴        </script>
 
