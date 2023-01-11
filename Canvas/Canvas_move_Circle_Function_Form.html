@@ -12,15 +12,18 @@
         div {
             position:absolute;
             top: 50%;
-            left:50%;
+            left:80%;
             transform: translate(-50%,-50%);
             pointer-events: none;
+        }
+        #canvas {
+            border: 1px solid #252525
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <canvas id="canvas" ></canvas>
+    <canvas id="canvas" width="800" height="800" ></canvas>
     <div>
         <p>
             <b>
@@ -33,53 +36,57 @@
         // Canvas
         var canvas = document.querySelector('#canvas');
         var context = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        var x = canvas.width / 2;
+        var y = canvas.height / 2;
+        // />
+
+
+        // Movement
+        var leftMove = false;
+        var rightMove = false;
+        var upMove = false;
+        var downMove = false;
+        // />
+
+        // 움직일 도형 크기
+        var rectWidth = 20;
+        var rectHeight = 20;
+        // />
+
+        // 도형 시작점
+        var rectX = (canvas.width - rectWidth) / 2;
+        var rectY = (canvas.width - rectHeight) / 2 ;
         // />
 
         document.addEventListener('keydown' , keyDownHandle , false);
         document.addEventListener('keyup', keyUpHandle , false)
         
-        // Movement
-        var leftMove ;
-        var rightMove ;
-        var upMove ;
-        var downMove ;
-        // />
-
-        window.addEventListener('keydown' , (e) => {
-            // Enter key
-            if(e.keyCode === 13) {
-                context.beginPath();
-                context.arc(100 , 100 , 20 , 0 , Math.PI * 2 , false)
-                context.fillStyle='#252525';
-                context.fill()
-                context.closePath();
-            }
-        })
-        
         // Key Down Function
         function keyDownHandle (e) {
-            if (e.key == 65 || e.key == 'a' || e.key == 'A') {
-                console.log(e.key)
+            if (e.key == 65 || e.key == 'a' || e.key == 'A' || e.key == 37 || e.key == 'ArrowLeft') {
+                leftMove = true ; 
+                console.log(`${e.key} Down !`)
 
             }
 
             // D
-            else if (e.key === 68 || e.key == 'd' || e.key == 'D') {
-                console.log(e.key)
+            else if (e.key === 68 || e.key == 'd' || e.key == 'D' || e.key == 39 || e.key == 'ArrowRight') {
+                rightMove = true ; 
+                console.log(`${e.key} Down !`)
 
             }
             
             // W
-            else if (e.key === 87 || e.key == 'w' || e.key == 'W') {
-                console.log(e.key)
+            else if (e.key === 87 || e.key == 'w' || e.key == 'W' || e.key == 38 || e.key == 'ArrowUp') {
+                upMove = true ; 
+                console.log(`${e.key} Down !`)
 
             }
             
             // S
-            else if (e.key === 83 || e.key == 's' || e.key == 'S') {
-                console.log(e.key)
+            else if (e.key === 83 || e.key == 's' || e.key == 'S' || e.key == 40 || e.key == 'ArrowDown') {
+                downMove = true ; 
+                console.log(`${e.key} Down !`)
 
             }
         }
@@ -87,25 +94,67 @@
 
         // Key Up Function 
         function keyUpHandle (e) {
-            if (e.keyCode === 65) {
+            if (e.key == 65 || e.key == 'a' || e.key == 'A' || e.key == 37 || e.key == 'ArrowLeft') {
+                leftMove = false ; 
+                console.log('A keyUp !')
 
-            }
+            }  
 
             // D
-            else if (e.keyCode === 68) {
+            else if (e.key === 68 || e.key == 'd' || e.key == 'D' || e.key == 37 || e.key == 'ArrowLeft') {
+                rightMove = false ; 
+                console.log('D keyUp !')
 
             }
 
             // W
-            else if (e.keyCode === 87) {
+            else if (e.key === 87 || e.key == 'w' || e.key == 'W' || e.key == 37 || e.key == 'ArrowLeft') {
+                upMove = false ; 
+                console.log('W keyUp !')
 
             }
 
             // S
-            else if (e.keyCode === 83) {
+            else if (e.key === 83 || e.key == 's' || e.key == 'S' || e.key == 37 || e.key == 'ArrowLeft') {
+                downMove = false ; 
+                console.log('S keyUp !')
 
             }
         }
+
+        function drawRect () {
+            document.addEventListener('keydown' , (e) => {
+                if(e.keyCode === 13) {
+                context.beginPath();
+                context.rect(rectX , rectY , rectWidth , rectHeight )
+                context.fillStyle='#252525';
+                context.fill()
+                context.closePath();
+            }
+            })
+        }
+
+        function draw () {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            
+            drawRect ();
+
+            if(rightMove && rectX < canvas.width - rectWidth) {
+                rectX += 5;
+            }
+            else if(leftMove && rectX > 0) {
+                rectX -= 5;
+            }
+            else if(downMove && rectY < canvas.height - rectHeight) {
+                rectY += 5;
+            }
+            else if(upMove && rectY > 0) {
+                rectY -= 5;
+            }
+        }
+        
+        draw()
+        
     </script>
 </body>
 </html>
