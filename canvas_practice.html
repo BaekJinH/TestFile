@@ -36,7 +36,27 @@
                 if( keyCode == 8 || keycode == 116) event.returnValue = false;
             }
 
+            // 그리기와 옮기기 분리하는 법
+            function drawBall () {
+                ctx.beginPath()
+                let circle = ctx.arc(x,y,20,0 , Math.PI * 2 , false);         
+                ctx.fillStyle = "#252525"
+                ctx.fill()
+                ctx.closePath()
+            }
+
+            function draw () {
+                ctx.clearRect(0, 0, canvas.width, canvas.height) ; 
+                drawBall();
+                canvasX += cx;
+                canvasY += cy;
+            }
+
+
             function animate() {
+
+
+
 
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -63,6 +83,11 @@
                 ctx.fill()
                 ctx.closePath()
                 
+                                                   
+                // 완전한 구 그리는 방법
+                // ctx.arc(100 , 100 , 20 , 0 , Math.PI*2 , false)
+                // />
+
                 x += 1
             }
             setInterval(animate,1)
