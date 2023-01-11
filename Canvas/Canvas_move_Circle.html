@@ -120,19 +120,23 @@
             // Enter 
             window.addEventListener('keydown' , (e) => {
                 if(e.keyCode === 13) {
+                    // Canvas Format
                     ctx.clearRect(0, 0, canvas.width, canvas.height) ; 
-                    
+                    // />
+
+                    // Start Drawing Circle
                     ctx.beginPath()
                     let circle = ctx.arc(x,y,20,0 , Math.PI * 2 , false);         
                     ctx.fillStyle = "#252525"
                     ctx.fill()
                     ctx.closePath()
-                    
+                    // End />
                 }
             })
             // Move Circle
             window.addEventListener('keydown' , (e) => {
                 if(e.keyCode === 65 || e.keyCode === 37) {
+                    
                 }
 
                 else if (e.keyCode === 68 || e.keyCode === 39) {
