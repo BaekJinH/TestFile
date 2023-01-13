@@ -28,7 +28,7 @@
         let power = 5;
         let size = 20;
         let gravity = power;
-        let directionX = 5;
+        let directionX = 0;
 
         let leftMove = false;
         let rightMove = false;
@@ -37,18 +37,17 @@
 
         document.addEventListener('keydown' , keyDownHandler)
         document.addEventListener('keyup' , keyUpHandler)
-
+        
         function update () {
             y += gravity ;
             gravity += 0.5;
             if( y + size >= canvas.height || y - size <= 0) {
                 gravity *= -0.9;
             }
-
             x += directionX;
             directionX *= 0.999;
             if(x + size > canvas.width || x - size<0){
-            directionX *= -1; 
+                directionX *= -1; 
             }
         }
 
@@ -70,7 +69,7 @@
             else if (e.key === 68 || e.key == 'd' || e.key == 'D' || e.key == 39 || e.key == 'ArrowRight') {
                 rightMove = true ;
                 console.log(`${e.key} Down !`)
-
+                
             }
 
             else if (e.key === 87 || e.key == 'w' || e.key == 'W' || e.key == 38 || e.key == 'ArrowUp') {
